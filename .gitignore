@@ -1,0 +1,72 @@
+# intellij idea
+.idea/
+*.iml
+*.ipr
+cmake-build-*/
+*.iws
+out/
+target/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+
+# Backupfiles from mergetools #
+*.orig
+
+# Java Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Eclipse metadata files that can be ignored
+.classpath
+.editorconfig
+.factorypath
+.gitattributes
+.project
+.settings/
+.metadata
+bin/**
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+/_eclipse/
+build
+eclipse-build
+
+
+# testng
+test-output/**
+./test-output
+testng.iml
+
+# Code Recommenders
+.recommenders/
+
+# Maven #
+target/
+/.mvn
+/.maven
+/.repository
+.flattened-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
