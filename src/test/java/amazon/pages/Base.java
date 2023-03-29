@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public abstract class Base {
 
-    public Base() throws IOException {
+    public Base() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 }

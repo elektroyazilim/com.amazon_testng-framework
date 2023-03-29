@@ -12,7 +12,7 @@ public class LoginTestV1ByPub {
     LoginPageV1ByPub loginPage = new LoginPageV1ByPub();
 
     @Test
-    public void loginPositive() throws IOException {
+    public void loginPositive() {
 
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
@@ -23,7 +23,7 @@ public class LoginTestV1ByPub {
     }
 
     @Test
-    public void logicPositiveByStylePublic() throws IOException {
+    public void logicPositiveByStylePublic() {
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
         Driver.getDriver().findElement(loginPage.username).sendKeys("rahulshettyacademy");
         Driver.getDriver().findElement(loginPage.password).sendKeys("learning");

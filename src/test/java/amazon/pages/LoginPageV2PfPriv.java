@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import java.io.IOException;
 
 public class LoginPageV2PfPriv extends Base{
-    public LoginPageV2PfPriv() throws IOException {
-    }
 
     @FindBy(id = "username")
     WebElement username;

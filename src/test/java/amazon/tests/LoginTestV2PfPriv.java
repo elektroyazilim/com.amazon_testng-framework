@@ -10,11 +10,8 @@ public class LoginTestV2PfPriv {
 
     LoginPageV2PfPriv loginpage = new LoginPageV2PfPriv();
 
-    public LoginTestV2PfPriv() throws IOException {
-    }
-
     @Test
-    public void loginPositive() throws IOException {
+    public void loginPositive(){
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
         loginpage.enterUsername("rahulshettyacademy");

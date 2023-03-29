@@ -6,11 +6,13 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
+    static Properties prop;
 
     // fileName can be like that "config.properties"
-    public static String getProperty(String fileName, String key) throws IOException {
+    public static String getProperty(String fileName, String key) {
         String path = "src/test/resources/config/" + fileName;
-        Properties prop = new Properties();
+        // Properties prop = new Properties();
+        prop = new Properties();
         String value = null;
         try {
             FileInputStream fis = new FileInputStream(path);
@@ -21,12 +23,11 @@ public class Config {
         }
 
         return value;
-
     }
 
 
-    public static String getProperty(String key) throws IOException {
-        Properties prop = new Properties();
+    public static String getProperty(String key)  {
+        prop = new Properties();
         try {
             // src/test/resources/config/config.properties
             FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
@@ -41,22 +42,29 @@ public class Config {
 
     }
 
-    public static void setProperty(String fileName, String key, String value) throws IOException {
+    public static void setProperty(String fileName, String key, String value){
 
         String path = "src/test/resources/config/" + fileName;
-        Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(path);
-        prop.load(fis);
+        prop = new Properties();
+        try{
 
-        prop.setProperty(key, value);
+            FileInputStream fis = new FileInputStream(path);
+            prop.load(fis);
 
-        FileOutputStream fos = new FileOutputStream(path);
-        prop.store(fos, null);
+            prop.setProperty(key, value);
+
+            FileOutputStream fos = new FileOutputStream(path);
+            prop.store(fos, null);
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Error : "+ ex);
+        }
     }
 
-    public static void setProperty(String key, String value) throws IOException {
+    public static void setProperty(String key, String value) {
 
-        Properties prop = new Properties();
+       prop = new Properties();
         try {
             FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties"); // src/test/resources/config/config.properties
             prop.load(fis);

@@ -10,11 +10,8 @@ public class LoginTestV2PfPub {
 
     LoginPageV2PfPub loginPage = new LoginPageV2PfPub();
 
-    public LoginTestV2PfPub() throws IOException {
-    }
-
     @Test
-    public void loginPositive() throws IOException {
+    public void loginPositive() {
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
         loginPage.username.sendKeys("rahulshettyacademy");
