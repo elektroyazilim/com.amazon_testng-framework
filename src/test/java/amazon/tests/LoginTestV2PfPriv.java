@@ -11,12 +11,13 @@ public class LoginTestV2PfPriv {
     LoginPageV2PfPriv loginpage = new LoginPageV2PfPriv();
 
     @Test
-    public void loginPositive(){
+    public void loginPositive() {
+
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
-        loginpage.enterUsername("rahulshettyacademy");
-        loginpage.enterPassword("learning");
-        loginpage.acceptTerms();
-        loginpage.confirmForm();
+        loginpage.enterUsername("rahulshettyacademy"); //textbox
+        loginpage.enterPassword("learning");    //textbox
+        loginpage.acceptTerms(); // checkbox
+        loginpage.confirmForm(); // signin button
     }
 }

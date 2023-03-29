@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
+
     static Properties prop;
 
     // fileName can be like that "config.properties"
-    public static String getProperty(String fileName, String key) {
+    public static String getProperty(String fileName, String key) throws IOException {
         String path = "src/test/resources/config/" + fileName;
-        // Properties prop = new Properties();
         prop = new Properties();
         String value = null;
         try {
@@ -23,10 +23,11 @@ public class Config {
         }
 
         return value;
+
     }
 
 
-    public static String getProperty(String key)  {
+    public static String getProperty(String key){
         prop = new Properties();
         try {
             // src/test/resources/config/config.properties
@@ -51,7 +52,7 @@ public class Config {
             FileInputStream fis = new FileInputStream(path);
             prop.load(fis);
 
-            prop.setProperty(key, value);
+        prop.setProperty(key, value);
 
             FileOutputStream fos = new FileOutputStream(path);
             prop.store(fos, null);
@@ -63,6 +64,7 @@ public class Config {
     }
 
     public static void setProperty(String key, String value) {
+
 
        prop = new Properties();
         try {

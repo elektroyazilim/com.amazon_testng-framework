@@ -10,15 +10,14 @@ public class LoginTestV1ByPriv {
 
     LoginPageV1ByPriv loginPage = new LoginPageV1ByPriv(Driver.getDriver());
 
-    public LoginTestV1ByPriv() {
-    }
-
     @Test
-    public void positiveLogin() {
+    public void positiveLogin(){
+
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
-        loginPage.enterUsername("rahulshettyacademy");
+
+        loginPage.enterUsername("rahulshettyacademy"); // username textbox
         loginPage.enterPassword("learning");
-        loginPage.clickTerms();
-        loginPage.confirmButton();
+        loginPage.clickTerms(); // checkbox
+        loginPage.confirmButton(); // confirm form
     }
 }

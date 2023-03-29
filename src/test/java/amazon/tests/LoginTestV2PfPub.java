@@ -18,7 +18,6 @@ public class LoginTestV2PfPub {
         loginPage.password.sendKeys("learning");
         loginPage.termChck.click();
         loginPage.signinBtn.click();
-
     }
 
 

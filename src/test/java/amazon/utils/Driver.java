@@ -66,3 +66,8 @@ public class Driver {
     }
 }
 
+/*
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+ */
+
