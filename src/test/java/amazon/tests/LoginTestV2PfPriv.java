@@ -10,17 +10,14 @@ public class LoginTestV2PfPriv {
 
     LoginPageV2PfPriv loginpage = new LoginPageV2PfPriv();
 
-    public LoginTestV2PfPriv() throws IOException {
-    }
-
     @Test
     public void loginPositive() throws IOException {
+
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
-
-        loginpage.enterUsername("rahulshettyacademy");
-        loginpage.enterPassword("learning");
-        loginpage.acceptTerms();
-        loginpage.confirmForm();
+        loginpage.enterUsername("rahulshettyacademy"); //textbox
+        loginpage.enterPassword("learning");    //textbox
+        loginpage.acceptTerms(); // checkbox
+        loginpage.confirmForm(); // signin button
     }
 }

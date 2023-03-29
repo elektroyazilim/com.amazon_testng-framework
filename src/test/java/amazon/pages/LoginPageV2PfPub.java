@@ -9,10 +9,6 @@ import java.io.IOException;
 
 public class LoginPageV2PfPub extends Base {
 
-    public LoginPageV2PfPub() throws IOException {
-    }
-
-
     @FindBy(id = "username")
     public WebElement username;
 
@@ -24,7 +20,6 @@ public class LoginPageV2PfPub extends Base {
 
     @FindBy(id = "signInBtn")
     public WebElement signinBtn;
-
 
 
 }

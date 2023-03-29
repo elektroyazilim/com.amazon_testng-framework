@@ -6,31 +6,31 @@ import org.openqa.selenium.WebDriver;
 public class LoginPageV1ByPriv {
     WebDriver driver = null;
 
-    public LoginPageV1ByPriv(WebDriver driver)
-    {
+    public LoginPageV1ByPriv(WebDriver driver) {
         this.driver = driver;
     }
 
-    By username = By.id("username");
-    By password = By.id("password");
-    By termChck = By.id("terms");
-    By signinBtn = By.id("signInBtn");
+    private By username = By.id("username");
+    private By password = By.id("password");
+    private By termChck = By.id("terms");
+    private By signinBtn = By.id("signInBtn");
 
-    public void enterUsername(String usernameText)
-    {
+
+    public void enterUsername(String usernameText) {
+        // control
         driver.findElement(username).sendKeys(usernameText);
     }
 
-    public void enterPassword(String passwordText)
-    {
+    public void enterPassword(String passwordText) {
         driver.findElement(password).sendKeys(passwordText);
     }
-    public void clickTerms()
-    {
+
+    public void clickTerms() {
         driver.findElement(termChck).click();
     }
-    public void confirmButton()
-    {
+
+    public void confirmButton() {
+        // if element can be clickable
         driver.findElement(signinBtn).click();
     }
 
