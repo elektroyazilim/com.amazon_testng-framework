@@ -17,6 +17,7 @@ public class LoginTestV2PfPriv {
     public void loginPositive() throws IOException {
         Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
 
+
         loginpage.enterUsername("rahulshettyacademy");
         loginpage.enterPassword("learning");
         loginpage.acceptTerms();

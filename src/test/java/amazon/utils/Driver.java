@@ -32,9 +32,7 @@ public class Driver {
         if (driver == null) {
             switch (Config.getProperty("browser")) {
                 case "chrome":
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
-                    driver = new ChromeDriver(options);
+                    driver = new ChromeDriver();
                     break;
                 case "firefox":
                     driver = new FirefoxDriver();
@@ -65,4 +63,9 @@ public class Driver {
         }
     }
 }
+
+/*
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+ */
 

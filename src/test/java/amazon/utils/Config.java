@@ -1,11 +1,14 @@
 package amazon.utils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
+
+
 
     // fileName can be like that "config.properties"
     public static String getProperty(String fileName, String key) throws IOException {
@@ -25,7 +28,7 @@ public class Config {
     }
 
 
-    public static String getProperty(String key) throws IOException {
+    public static String getProperty(String key) throws IOException{
         Properties prop = new Properties();
         try {
             // src/test/resources/config/config.properties
