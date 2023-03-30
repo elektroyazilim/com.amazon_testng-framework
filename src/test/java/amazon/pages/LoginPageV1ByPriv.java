@@ -7,6 +7,7 @@ public class LoginPageV1ByPriv {
     WebDriver driver = null;
 
     public LoginPageV1ByPriv(WebDriver driver) {
+
         this.driver = driver;
     }
 
@@ -22,10 +23,12 @@ public class LoginPageV1ByPriv {
     }
 
     public void enterPassword(String passwordText) {
+
         driver.findElement(password).sendKeys(passwordText);
     }
 
     public void clickTerms() {
+
         driver.findElement(termChck).click();
     }
 

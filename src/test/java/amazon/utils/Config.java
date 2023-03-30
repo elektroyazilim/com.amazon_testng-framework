@@ -10,7 +10,7 @@ public class Config {
     static Properties prop;
 
     // fileName can be like that "config.properties"
-    public static String getProperty(String fileName, String key) throws IOException {
+    public static String getProperty(String fileName, String key) {
         String path = "src/test/resources/config/" + fileName;
         prop = new Properties();
         String value = null;

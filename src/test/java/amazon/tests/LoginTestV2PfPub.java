@@ -1,10 +1,9 @@
 package amazon.tests;
 
 import amazon.pages.LoginPageV2PfPub;
+import amazon.utils.BrowserUtils;
 import amazon.utils.Driver;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 public class LoginTestV2PfPub {
 
@@ -19,7 +18,5 @@ public class LoginTestV2PfPub {
         loginPage.termChck.click();
         loginPage.signinBtn.click();
     }
-
-
 
 }

@@ -6,10 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.io.IOException;
+
 import java.time.Duration;
 
 public class Driver {
@@ -32,9 +31,7 @@ public class Driver {
         if (driver == null) {
             switch (Config.getProperty("browser")) {
                 case "chrome":
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
-                    driver = new ChromeDriver(options);
+                    driver = new ChromeDriver();
                     break;
                 case "firefox":
                     driver = new FirefoxDriver();
