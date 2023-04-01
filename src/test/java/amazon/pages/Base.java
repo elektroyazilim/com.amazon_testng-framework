@@ -9,4 +9,6 @@ public abstract class Base {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+
 }
