@@ -12,8 +12,11 @@ public class HomePage extends Base {
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
 
+    @FindBy(id = "nav-search-submit-button")
+    public WebElement searchButton;
+
     @FindBy(xpath = "//ul[@role='list']/li")
-    public List<WebElement> elements;
+    public List<WebElement> products;
 
     @FindBy(xpath = "//ul[@role='list']/li[1]//a")
     public WebElement firstProductInHome;

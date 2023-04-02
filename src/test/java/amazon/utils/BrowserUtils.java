@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import javax.annotation.Nullable;
-import java.io.*;
 import java.time.Duration;
 import java.util.*;
 
