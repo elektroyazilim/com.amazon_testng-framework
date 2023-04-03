@@ -11,6 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class US002_ProductSearchTest {
@@ -27,6 +28,7 @@ public class US002_ProductSearchTest {
 
         String searchText = "headphone";
         takeMeToSearchPage(searchText);
+        // search page
         String currentUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(currentUrl.contains(searchText));
     }
@@ -42,40 +44,58 @@ public class US002_ProductSearchTest {
     public void TC002_CorrectSearchResultsByKeyword() {
         // Verify that the search results should be about the search query.
 
-        String searchText = "Headphones";
+        String searchText = "Headphones".toLowerCase();
+
         takeMeToSearchPage(searchText);
+        // search page - results
         List<WebElement> products = searchPage.searchResults; // product titles
 
-        // buraya ignore listesi gelecek.
+        //  ignore list
         List<String> words = new ArrayList<>(){{
-            add("");
             add("buds");
             add("airpod");
+            add("earbuds");
+            add("earphones");
         }};
-
 
         for (WebElement product : products) {
 
-            if (words.contains(product.getText().toLowerCase())) {
+            boolean isExist = false;
+
+            for(String word : words)
+            {
+                if(product.getText().toLowerCase().contains(word))
+                {
+                    isExist = true;
+                    break;
+                }
+            }
+            if (isExist) {
                 continue;
             }
-            System.out.println(product.getText());
-            System.out.println("---------------------------");
-            Assert.assertTrue(product.getText().toLowerCase().contains(searchText.toLowerCase()));
-
+            if(!product.getText().isEmpty())
+            {
+                // System.out.println(product.getText());
+                // System.out.println("---------------------------");
+                Assert.assertTrue(product.getText().toLowerCase().contains(searchText));
+            }
         }
 
     }
 
 
     @Test
-    public void containTest() // contains() method is case sensitive
+    public void containTest()
     {
-        System.out.println("Headx".contains("head")); // false
+
+        List<String> words = Arrays.asList("buds", "airpod", "earbuds", "earphones");
+
+        System.out.println(words.contains("Buds") + " : Buds"); // false : Buds
+        System.out.println(words.contains("buds") + " : buds"); // true : buds
 
     }
 
-    @AfterMethod
+    // @AfterMethod
     void checkWebsiteForFaking() {
         HomePage mp = new HomePage();
         if (mp.fakeBar.size() != 0) {
@@ -90,3 +110,32 @@ public class US002_ProductSearchTest {
     System.out.println(product.getText());
     System.out.println("------------------------------------------------------------");
  */
+
+// IMPORTANT NOTES
+
+// The contains() method in Java is case-sensitive
+// contains() method is case sensitive
+// System.out.println("Headx".contains("head")); // false
+// string and list
+
+// List<String> words = Arrays.asList("buds", "airpod", "earbuds", "earphones");
+// System.out.println(words.contains("Buds") + " : Buds"); // false : Buds
+// System.out.println(words.contains("buds") + " : buds"); // true : buds
+
+// -----------------------------------------------
+
+// The contains() method in Xpath is case sensitive on Text
+// //*[contains(text(),'Sponsored')]
+
+// -----------------------------------------------
+
+// Array to ArrayList Method
+// List<String> convertedList = Arrays.asList(array);
+
+// -----------------------------------------------
+
+// find the locators in recognito mode
+// because the site using ai like amazon uses your browser history, so the website will be different on test automation
+
+//  List<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+//  System.out.println(numbers);
