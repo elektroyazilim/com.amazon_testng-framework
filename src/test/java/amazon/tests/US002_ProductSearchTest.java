@@ -51,7 +51,7 @@ public class US002_ProductSearchTest {
         List<WebElement> products = searchPage.searchResults; // product titles
 
         //  ignore list
-        List<String> words = new ArrayList<>(){{
+        List<String> words = new ArrayList<>() {{
             add("buds");
             add("airpod");
             add("earbuds");
@@ -62,10 +62,8 @@ public class US002_ProductSearchTest {
 
             boolean isExist = false;
 
-            for(String word : words)
-            {
-                if(product.getText().toLowerCase().contains(word))
-                {
+            for (String word : words) {
+                if (product.getText().toLowerCase().contains(word)) {
                     isExist = true;
                     break;
                 }
@@ -73,29 +71,75 @@ public class US002_ProductSearchTest {
             if (isExist) {
                 continue;
             }
-            if(!product.getText().isEmpty())
-            {
+            if (!product.getText().isEmpty()) {
                 // System.out.println(product.getText());
                 // System.out.println("---------------------------");
                 Assert.assertTrue(product.getText().toLowerCase().contains(searchText));
             }
         }
-
     }
-
 
     @Test
-    public void containTest()
-    {
+    public void TC003_PresenceFilterSection() {
+        // Verify that filter should be present for filtering the search results bases on Brand, Price, Reviews or Ratings.
 
-        List<String> words = Arrays.asList("buds", "airpod", "earbuds", "earphones");
+        takeMeToSearchPage("aaa");
 
-        System.out.println(words.contains("Buds") + " : Buds"); // false : Buds
-        System.out.println(words.contains("buds") + " : buds"); // true : buds
+        Assert.assertTrue(searchPage.filterSection.isDisplayed());
+        Assert.assertTrue(searchPage.brandFilter.isDisplayed());
+        Assert.assertTrue(searchPage.priceFilter.isDisplayed());
+        Assert.assertTrue(searchPage.reviewFilter.isDisplayed());
+    }
+
+    @Test
+    public void TC004_SortingOptionsInFilterPage() {
+        // Verify that sorting options should be present and be clickable on search results page.
+
+        takeMeToSearchPage("aaa"); // String searchText = "aaa";
+
+        // search page
+        Assert.assertTrue(searchPage.sortOptBtn.isDisplayed());
+        Assert.assertTrue(searchPage.sortOptBtn.isEnabled());
+    }
+
+    @Test
+    public void TC005_NumberOfSearchResult() {
+        // Verify that the number of search results displayed on one page.
+
+        String searchText = "Headphone";
+        takeMeToSearchPage(searchText);
+
+        // 1-48 of 277 results for "aaa"
+        String text = searchPage.numberOfSearchResult.getText().toLowerCase();
+
+        Assert.assertTrue(!text.isEmpty());
+        Assert.assertTrue(text.contains(searchText.toLowerCase()));
+    }
+
+    @Test
+    public void TC006_PresencePreviousNextButton() {
+        // Verify that there should be navigation button(Next and Previous) for navigation to pages
+        takeMeToSearchPage("aaa");
+        // search page
+        Assert.assertTrue(searchPage.previousBtn.isDisplayed());
+        Assert.assertTrue(searchPage.nextBtn.isDisplayed());
+        // System.out.println(searchPage.previousBtn.isEnabled()); // not working
+
+        String prevBtnClass = searchPage.previousBtn.getAttribute("class");
+
+        if (prevBtnClass.contains("disabled"))
+        {
+            System.out.println("Previous btn is disable");
+        }
+        else
+        {
+            System.out.println("Previous btn is enable");
+        }
 
     }
 
-    // @AfterMethod
+
+    @AfterMethod
     void checkWebsiteForFaking() {
         HomePage mp = new HomePage();
         if (mp.fakeBar.size() != 0) {
