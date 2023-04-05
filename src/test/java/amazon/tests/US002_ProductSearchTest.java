@@ -2,8 +2,7 @@ package amazon.tests;
 
 import amazon.pages.HomePage;
 import amazon.pages.SearchPage;
-import amazon.utils.BrowserUtils;
-import amazon.utils.Config;
+import amazon.utils.AmazonUtils;
 import amazon.utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -14,31 +13,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class US002_ProductSearchTest {
+public class US002_ProductSearchTest { // static
     // US002_Product Search - Verify the product search functionality
 
     HomePage homePage = new HomePage();
     SearchPage searchPage = new SearchPage();
-
-    String website = Config.getProperty("url");
 
     @Test
     public void TC001_SearchByClickOnSearchIcon() {
         // Verify that after entering search text and clicking on search icon, the search should be performed.
 
         String searchText = "headphone";
-        takeMeToSearchPage(searchText);
+        AmazonUtils.takeMeToSearchPage(homePage, searchText);
         // search page
         String currentUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(currentUrl.contains(searchText));
     }
 
-    public void takeMeToSearchPage(String searchText) {
-        Driver.getDriver().get(website);
-        homePage.searchBox.sendKeys(searchText);
-        homePage.searchButton.click();
-        BrowserUtils.waitFor(2);
-    }
+
 
     @Test
     public void TC002_CorrectSearchResultsByKeyword() {
@@ -46,7 +38,7 @@ public class US002_ProductSearchTest {
 
         String searchText = "Headphones".toLowerCase();
 
-        takeMeToSearchPage(searchText);
+        AmazonUtils.takeMeToSearchPage(homePage, searchText);
         // search page - results
         List<WebElement> products = searchPage.searchResults; // product titles
 
@@ -83,7 +75,7 @@ public class US002_ProductSearchTest {
     public void TC003_PresenceFilterSection() {
         // Verify that filter should be present for filtering the search results bases on Brand, Price, Reviews or Ratings.
 
-        takeMeToSearchPage("aaa");
+        AmazonUtils.takeMeToSearchPage(homePage, "aaa");
 
         Assert.assertTrue(searchPage.filterSection.isDisplayed());
         Assert.assertTrue(searchPage.brandFilter.isDisplayed());
@@ -95,7 +87,7 @@ public class US002_ProductSearchTest {
     public void TC004_SortingOptionsInFilterPage() {
         // Verify that sorting options should be present and be clickable on search results page.
 
-        takeMeToSearchPage("aaa"); // String searchText = "aaa";
+        AmazonUtils.takeMeToSearchPage(homePage,"aaa"); // String searchText = "aaa";
 
         // search page
         Assert.assertTrue(searchPage.sortOptBtn.isDisplayed());
@@ -107,7 +99,7 @@ public class US002_ProductSearchTest {
         // Verify that the number of search results displayed on one page.
 
         String searchText = "Headphone";
-        takeMeToSearchPage(searchText);
+        AmazonUtils.takeMeToSearchPage(homePage, searchText);
 
         // 1-48 of 277 results for "aaa"
         String text = searchPage.numberOfSearchResult.getText().toLowerCase();
@@ -119,7 +111,7 @@ public class US002_ProductSearchTest {
     @Test
     public void TC006_PresencePreviousNextButton() {
         // Verify that there should be navigation button(Next and Previous) for navigation to pages
-        takeMeToSearchPage("aaa");
+        AmazonUtils.takeMeToSearchPage(homePage, "aaa");
         // search page
         Assert.assertTrue(searchPage.previousBtn.isDisplayed());
         Assert.assertTrue(searchPage.nextBtn.isDisplayed());

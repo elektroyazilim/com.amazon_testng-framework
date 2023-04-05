@@ -34,4 +34,13 @@ public class SearchPage extends Base{
     @FindBy(xpath = "//*[contains(@class, 's-pagination-next')]")
     public WebElement nextBtn;
 
+
+    @FindBy(xpath = "//ul[@data-csa-c-content-id='2661611011']/li[3]//a") // 2.price (click)
+    public WebElement priceInterval;
+
+    @FindBy(xpath = "//ul[@data-csa-c-content-id='2661611011']/li[3]/span")
+    public WebElement twoPrices; // border
+
+    @FindBy(xpath = "//span[@class='a-price']" ) //
+    public List<WebElement> priceResults;
 }
