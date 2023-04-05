@@ -318,8 +318,12 @@ public class BrowserUtils {
 
     public static void scrollToUp() {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("scroll(0, -250);");
+    }
+
+    public static void scrollToDown() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("scroll(0, 250);");
-        //js.executeScript("scroll(0, -250);"); -> up
     }
 
     public static void scrollUntilEnd(WebDriver driver) {
