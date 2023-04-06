@@ -8,6 +8,18 @@ public class AmazonUtils {
         Driver.getDriver().get(website);
         homePage.searchBox.sendKeys(searchText);
         homePage.searchButton.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
+    }
+
+    public static boolean IsPaginationEnabled(String className)
+    {
+        if(className.contains("s-pagination-disabled")) // tagName.equals("span")
+        {
+            return false;
+        }
+        else
+        {
+           return true;
+        }
     }
 }

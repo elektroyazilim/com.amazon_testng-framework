@@ -27,11 +27,19 @@ public class Driver {
         // Eğer driver nesnesi hafızada boşsa, oluşturulmamışsa yeniden oluşturmana gerek yok.
         // Eğer null ise, yeniden oluşturabilirsin.
         // Sadece ilk çağırıldığında bir tane nesne üret, sonraki çağırmalarda var olan nesnesi kullan.
+
         if (driver == null) {
             switch (Config.getProperty("browser")) {
                 case "chrome":
-                    driver = new ChromeDriver();
+                {
+                    ChromeOptions options = new ChromeOptions();
+                    options.setExperimentalOption("useAutomationExtension", false);
+                    options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
+                    options.addArguments("disable-infobars");
+                    driver = new ChromeDriver(options);
                     break;
+                }
+
                 case "firefox":
                     driver = new FirefoxDriver();
                     break;
