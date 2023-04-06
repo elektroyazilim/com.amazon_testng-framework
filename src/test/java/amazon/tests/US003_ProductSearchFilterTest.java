@@ -12,12 +12,14 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class US003_ProductSearchFilterTest {
+    // Verify filter section in search product module if it works or not
 
     HomePage homePage = new HomePage();
     SearchPage searchPage = new SearchPage();
 
     @Test
     public void TC001_PriceFilter() {
+        // Verify Price Filter section works or not
         String searchText = "dress";
         AmazonUtils.takeMeToSearchPage(homePage, searchText);
 
@@ -45,13 +47,26 @@ public class US003_ProductSearchFilterTest {
                 System.out.println("invalid");
                 Assert.assertTrue(false, "The price is out of border");
             }
-
         }
-
     }
 
     @Test
     public void TC002_BrandFilter() {
+        // Verify Brand Filter section works or not
+
+        String searchText = "dress";
+        AmazonUtils.takeMeToSearchPage(homePage, searchText);
+
+        String brand = searchPage.brandText.getText();
+
+        // search page
+        searchPage.anyBrand.click();
+        BrowserUtils.waitFor(3);
+
+        for (WebElement element : searchPage.productTitles) {
+            String productTitle = element.getText();
+            Assert.assertTrue(productTitle.contains(brand));
+        }
 
     }
 

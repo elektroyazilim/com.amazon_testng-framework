@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="parallel test suite" thread-count="3" parallel="tests">
+
+    <!--
+    <listeners>
+        <listener class-name="testngpractise.Listener" />
+    </listeners>
+    -->
+
+    <test name="Login Tests v1" thread-count="5"  parallel="methods">
+        <classes>
+            <class name="amazon.tests.LoginTestV1ByPriv" />
+            <class name="amazon.tests.LoginTestV1ByPub"></class>
+        </classes>
+    </test>
+
+    <test name="Login Tests v2">
+        <classes>
+            <class name="amazon.tests.LoginTestV2PfPriv" />
+            <class name="amazon.tests.LoginTestV2PfPub"></class>
+        </classes>
+    </test>
+
+</suite>
+
+<!--
+
+ <test name="LoginMain" parallel="classes" >
+        <classes>
+            <class name="testngpractise.WebLogin" />
+            <class name="testngpractise.MainPage" />
+        </classes>
+    </test>
+
+-->

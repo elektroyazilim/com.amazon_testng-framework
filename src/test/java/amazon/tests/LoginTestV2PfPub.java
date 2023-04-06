@@ -17,6 +17,10 @@ public class LoginTestV2PfPub {
         loginPage.password.sendKeys("learning");
         loginPage.termChck.click();
         loginPage.signinBtn.click();
+
+        BrowserUtils.waitFor(3);
+
+        System.out.println("LoginTestV2PfPub.loginPositive : "+ Thread.currentThread().getId());
     }
 
 }
