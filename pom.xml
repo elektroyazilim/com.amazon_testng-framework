@@ -12,6 +12,65 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
+
+    <!-- maven profiles -->
+    <!--
+    mvn test –PRegression
+    mvn test –PSmoke
+    // Id yi veriyoruz.
+    -->
+    <profiles>
+        <profile>
+            <id>Regression</id>
+
+            <build>
+                <pluginManagement>
+                    <plugins>
+
+                        <plugin>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.22.1</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>testng2.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+
+                        </plugin>
+
+                    </plugins>
+                </pluginManagement>
+            </build>
+
+        </profile>
+
+        <profile>
+            <id>Smoke</id>
+
+            <build>
+                <pluginManagement>
+                    <plugins>
+
+                        <plugin>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.22.1</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+
+                        </plugin>
+
+                    </plugins>
+                </pluginManagement>
+            </build>
+
+        </profile>
+
+    </profiles>
+<!-- *********************************************** -->
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
@@ -32,6 +91,27 @@
             <artifactId>testng</artifactId>
             <version>7.7.1</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
         </dependency>
 
 
@@ -56,7 +136,15 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
+                    <version>3.0.0-M6</version>
+
+                    <!-- test suites without parameters -->
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
