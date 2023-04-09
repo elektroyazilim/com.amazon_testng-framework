@@ -39,32 +39,6 @@ public class JsonUtils {
 
     }
 
-    // @DataProvider
-    public Object[][] getData() { // Java side
-
-        List<HashMap<String, String>> data = getJsonData("data.json");
-
-        return new Object[][] { { data.get(0)}, { data.get(1)} };
-
-    } // [{username=Esma, password=rahull}, {username=Fatih, password=shetty}]
-
-    //@Test
-    public void fillForm(HashMap<String,String> input) {
-
-        /*
-
-        FormPage2 formpage = new FormPage2(driver);
-
-        formpage.getTxtNameField().sendKeys(input.get("name")); // name textbox
-        formpage.selectRadioBtn(input.get("gender"));// female radio button
-
-        // select country from combobox
-        formpage.selectCountryFrCbb(input.get("country"));
-        formpage.getBtnLetsShop().click(); // lets shop button click
-
-         */
-
-    }
 
 
 }
