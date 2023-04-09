@@ -87,6 +87,7 @@ public class ExcelUtils {
         List<String> dataList = new ArrayList<>();
 
         String path = "src/test/resources/data/" + fileName;
+
         List<List<String>> rows = null;
         try {
             FileInputStream file = new FileInputStream(path);
@@ -158,8 +159,6 @@ public class ExcelUtils {
                 "\\src\\test\\resources\\data\\" +
                 csvFileName; // excel.csv
 
-        String line = "";
-        String splitBy = splitCharacter;
         ArrayList<ArrayList<String>> datas = new ArrayList<>();
         ArrayList<String> data;
         String[] temp = null;
@@ -167,19 +166,19 @@ public class ExcelUtils {
             // parsing a CSV file into BufferedReader class constructor
             BufferedReader br = new BufferedReader(new FileReader(excelFilePath));
             br.readLine(); // dummy reading to header (columns name)
-            int countLine = 0;
 
+            String line = "";
             while ((line = br.readLine()) != null) // returns a Boolean value
             {
                 data = new ArrayList<String>();
-                temp = line.split(splitBy); // use comma as separator
+                temp = line.split(splitCharacter); // use comma as separator
 
                 for (String item : temp) {
                     data.add(item);
                 }
+                //data =  {us1,pass1}
 
-                datas.add(countLine, data);
-                countLine++;
+                datas.add(data);
                 // datas.add(Arrays.asList(employee)); // Add String Array to ArrayList
                 // ****onemli -- dikkat
 
@@ -190,6 +189,8 @@ public class ExcelUtils {
         System.out.println(datas);
         // [[Ayse, female, Argentina], [Hatice, female, Belarus], [Zeynep, female, Argentina]]
         // [[us1, pass1], [us2, pass2], [us3, pass3]]
+
+
         Object[][] objArray = new Object[datas.size()][temp.length]; // too dynamic
 
         for (int i = 0; i < objArray.length; i++) {

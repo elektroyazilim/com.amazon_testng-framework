@@ -1,5 +1,6 @@
 package amazon.tests;
 
+import amazon.utils.BrowserUtils;
 import amazon.utils.Driver;
 import amazon.utils.JsonUtils;
 import org.openqa.selenium.By;
@@ -19,6 +20,7 @@ public class JsonDataTest {
         Driver.getDriver().findElement(By.id("password")).sendKeys(password);
 
         Driver.getDriver().findElement(By.id("signInBtn")).click();
+        BrowserUtils.waitFor(1);
     }
 
     @DataProvider
@@ -29,7 +31,7 @@ public class JsonDataTest {
 
         Object[][] objData = new Object[data.size()][data.get(0).size()];
 
-        // hashmap to object[][]
+        // list<hashmap> to object[][]
         for(int i =0; i< data.size(); i++)
         {
             for (int j =0; j < data.get(0).size(); j++)
@@ -38,7 +40,7 @@ public class JsonDataTest {
                 {
                     objData[i][j] = data.get(i).get("username");
                 }
-                else
+                else // 1
                 {
                     objData[i][j] = data.get(i).get("password");
                 }

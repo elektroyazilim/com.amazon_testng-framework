@@ -24,6 +24,7 @@ public class ExcelDataTest {
         List<List<String>> liste = ExcelUtils.getDataAllRows("data.xlsx", "pair");
         Object[][] data = new Object[liste.size()][liste.get(0).size()];
 
+        // multidimensional list to object[][] array - liste -> data
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < liste.get(0).size(); j++) {
                 data[i][j] = liste.get(i).get(j);
