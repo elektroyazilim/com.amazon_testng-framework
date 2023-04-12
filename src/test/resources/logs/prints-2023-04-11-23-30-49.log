@@ -1,6 +1,0 @@
-23:30:29.066 [main] INFO  amazon.tests.US004_PaginationTest - We are at search page for headphone
-23:30:29.135 [main] DEBUG amazon.tests.US004_PaginationTest - Scroll to previous button..
-23:30:29.174 [main] INFO  amazon.tests.US004_PaginationTest - Test passed successfully.
-23:30:37.394 [main] INFO  amazon.tests.US004_PaginationTest - In search page for dress
-23:30:37.431 [main] DEBUG amazon.tests.US004_PaginationTest - Scrolling is successfully..
-23:30:37.514 [main] INFO  amazon.tests.US004_PaginationTest - Test passed succesfully..
