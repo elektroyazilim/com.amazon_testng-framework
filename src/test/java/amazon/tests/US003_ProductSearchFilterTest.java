@@ -4,7 +4,8 @@ import amazon.pages.HomePage;
 import amazon.pages.SearchPage;
 import amazon.utils.AmazonUtils;
 import amazon.utils.BrowserUtils;
-import amazon.utils.Driver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,6 +15,7 @@ import java.util.List;
 public class US003_ProductSearchFilterTest {
     // Verify filter section in search product module if it works or not
 
+    private static final Logger log = LogManager.getLogger(US003_ProductSearchFilterTest.class);
     HomePage homePage = new HomePage();
     SearchPage searchPage = new SearchPage();
 
@@ -22,6 +24,7 @@ public class US003_ProductSearchFilterTest {
         // Verify Price Filter section works or not
         String searchText = "dress";
         AmazonUtils.takeMeToSearchPage(homePage, searchText);
+        log.info("Search page is opened for " + searchText);
 
         BrowserUtils.scrollToDown();
 

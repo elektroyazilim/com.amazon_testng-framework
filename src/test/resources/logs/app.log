@@ -230,3 +230,13 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 2023-04-12 00:22:02,811 DEBUG amazon.tests.US004_PaginationTest [main] Scrolling is successfully..
 2023-04-12 00:22:02,848 INFO amazon.tests.US004_PaginationTest [main] Test passed succesfully..
 2023-04-12 00:22:16,742 INFO amazon.tests.US004_PaginationTest [main] Test passed succesfully..
+2023-04-12 01:00:22,011 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:28) - Search page is opened for dress
+2023-04-12 01:03:09,167 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:04:20,168 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:05:56,420 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:07:28,798 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:09:02,173 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:15:42,853 INFO amazon.tests.US003_ProductSearchFilterTest [main] - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
+2023-04-12 01:17:38,630 INFO amazon.tests.US004_PaginationTest [main] - (US004_PaginationTest.java:23) - We are at search page for headphone
+2023-04-12 01:17:38,694 DEBUG amazon.tests.US004_PaginationTest [main] - (US004_PaginationTest.java:27) - Scroll to previous button..
+2023-04-12 01:17:38,823 INFO amazon.tests.US004_PaginationTest [main] - (US004_PaginationTest.java:37) - Test passed successfully.
