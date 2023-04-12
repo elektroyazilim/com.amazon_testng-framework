@@ -1,1 +1,3 @@
-00:22:16.742 [main] INFO  amazon.tests.US004_PaginationTest - Test passed succesfully..
+01:17:38.630 [main] INFO  amazon.tests.US004_PaginationTest - (US004_PaginationTest.java:23) - We are at search page for headphone
+01:17:38.694 [main] DEBUG amazon.tests.US004_PaginationTest - (US004_PaginationTest.java:27) - Scroll to previous button..
+01:17:38.823 [main] INFO  amazon.tests.US004_PaginationTest - (US004_PaginationTest.java:37) - Test passed successfully.
