@@ -10,6 +10,9 @@ target/
 atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 
+# log
+*.log
+
 # Backupfiles from mergetools #
 *.orig
 

@@ -1,4 +1,0 @@
-00:22:16.742 [main] INFO  amazon.tests.US004_PaginationTest - Test passed succesfully..
-01:00:22.011 [main] INFO  amazon.tests.US003_ProductSearchFilterTest - (US003_ProductSearchFilterTest.java:28) - Search page is opened for dress
-01:03:09.167 [main] INFO  amazon.tests.US003_ProductSearchFilterTest - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
-01:04:20.168 [main] INFO  amazon.tests.US003_ProductSearchFilterTest - (US003_ProductSearchFilterTest.java:27) - Search page is opened for dress
