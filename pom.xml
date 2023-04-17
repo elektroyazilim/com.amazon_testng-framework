@@ -32,7 +32,7 @@
                             <version>2.22.1</version>
                             <configuration>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
 
@@ -56,7 +56,7 @@
                             <version>2.22.1</version>
                             <configuration>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
 
@@ -129,11 +129,27 @@
             <version>2.20.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
+
+
 
     </dependencies>
 
     <build>
 
+        <!-- for log4j2.xml -->
         <resources>
             <resource>
                 <directory>src/test/resources/config</directory>

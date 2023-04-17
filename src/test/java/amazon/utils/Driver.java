@@ -4,75 +4,98 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.safari.SafariDriver;
-
 
 import java.time.Duration;
 
 public class Driver {
-    // Eğer bir class'tan NESNE ÜRETİLMESİNİ İSTEMİYORSANIZ
-    // constructor'ı private yapabilirsiniz (Singleton Class)
+
+    /*
+    Creating the private constructor so this class' object
+    is not reachable from outside
+     */
     private Driver() {
     }
 
-    // WebDriver nesnemizi, static olarak oluşturduk, çünkü program başlar başlamaz
-    // hafızada yer almasını istiyoruz.
-    static WebDriver driver;
-    // Programın herhangi bir yerinden getDriver() methodu çağırılarak
-    // hafıza STATIC olarak oluşturulmuş DRIVER nesnesine erişebiliriz.
-    // Yani yeniden WebDriver nesnesi oluşturmak zorunda değiliz.
-    //Driver.getDriver()
+    /*
+    Making our 'driver' instance private so that it is not reachable from outside of the class.
+    We make it static, because we want it to run before everything else, and also we will use it in a static method
+     */
+    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+
+    /*
+    Creating re-usable utility method that will return same 'driver' instance everytime we call it.
+     */
     public static WebDriver getDriver() {
-        // Eğer driver nesnesi hafızada boşsa, oluşturulmamışsa yeniden oluşturmana gerek yok.
-        // Eğer null ise, yeniden oluşturabilirsin.
-        // Sadece ilk çağırıldığında bir tane nesne üret, sonraki çağırmalarda var olan nesnesi kullan.
+        //setting various capabilities for browsers
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("use-fake-ui-for-media-stream");
 
-        if (driver == null) {
-            switch (Config.getProperty("browser")) {
-                case "chrome":
-                {
-                    ChromeOptions options = new ChromeOptions();
-                    options.setExperimentalOption("useAutomationExtension", false);
-                    options.setExperimentalOption("excludeSwitches",new String[]{"enable-automation"});
-                    options.addArguments("disable-infobars");
-                    driver = new ChromeDriver(options);
-                    break;
+        EdgeOptions edgeOptions = new EdgeOptions();
+        edgeOptions.addArguments("use-fake-ui-for-media-stream");
+
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.addArguments("use-fake-ui-for-media-stream");
+
+
+        if (driverPool.get() == null) {
+            synchronized (Driver.class) {
+
+            /*
+            We read our browser type from configuration.properties file using
+            .getProperty method we creating in ConfigurationReader class.
+             */
+                String browserType = Config.getProperty("browser");
+            /*
+            Depending on the browser type our switch statement will determine
+            to open specific type of browser/driver
+             */
+                switch (browserType) {
+
+                    case "chrome":
+                       driverPool.set(new ChromeDriver(chromeOptions));
+
+                        break;
+                    case "firefox":
+                        driverPool.set(new FirefoxDriver(firefoxOptions));
+
+                        break;
+                    case "edge":
+                        driverPool.set(new EdgeDriver(edgeOptions));
+
+                        break;
+
+                    case "safari":
+                        driverPool.set(new SafariDriver());
+                        break;
+
                 }
-
-                case "firefox":
-                    driver = new FirefoxDriver();
-                    break;
-                case "edge":
-                    driver = new EdgeDriver();
-                    break;
-                case "safari":
-                    driver = new SafariDriver();
-                    break;
-                case "headless-chrome":
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
             }
-            driver.manage().window().maximize(); //-> not move aanywhere
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().deleteAllCookies();
+        driverPool.get().manage().window().maximize();
+        driverPool.get().manage().deleteAllCookies();
+        driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        return driver;
+        /*
+        Same driver instance will be returned every time we call Driver.getDriver(); method
+         */
+        return driverPool.get();
     }
 
+    /*
+    This method makes sure we have some form of driver sesion or driver id has.
+    Either null or not null it must exist.
+     */
     public static void closeDriver() {
-        // Eğer driver nesnesi NULL değilse, yani hafızada varsa
-        if (driver != null) {
-            driver.quit();  // driver'ı kapat
-            driver = null;  // driver'ı hafızadan temizle.
+        if (driverPool.get() != null) {
+            driverPool.get().quit();
+            driverPool.remove();
         }
     }
 }
-
-/*
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
- */
 

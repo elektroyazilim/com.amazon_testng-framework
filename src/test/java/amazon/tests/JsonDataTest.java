@@ -4,6 +4,7 @@ import amazon.utils.BrowserUtils;
 import amazon.utils.Driver;
 import amazon.utils.JsonUtils;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -49,6 +50,30 @@ public class JsonDataTest {
         }
 
         return objData;
+
+    }
+
+    @Test
+    public void dummyTest()
+    {
+        System.out.println("Dummy Test");
+        Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
+        Driver.getDriver().findElement(By.id("username")).sendKeys("username");
+        Driver.getDriver().findElement(By.id("password")).sendKeys("password");
+
+        Driver.getDriver().findElement(By.id("signInBtn")).click();
+
+        Assert.assertTrue(false);
+    }
+
+    @Test
+    public void dummyTest2()
+    {
+        System.out.println("Dummy Test");
+        Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
+        Driver.getDriver().findElement(By.id("username")).sendKeys("username");
+        Driver.getDriver().findElement(By.id("passwordd")).sendKeys("password");
+        //Assert.assertTrue(false);
 
     }
 }

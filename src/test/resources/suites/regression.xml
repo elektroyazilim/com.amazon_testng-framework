@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="parallel test suite" parallel="tests" thread-count="15">
+
+    <!--
+    <listeners>
+        <listener class-name="testngpractise.Listener" />
+    </listeners>
+    -->
+
+    <test name="Homepage">
+        <classes>
+            <class name="amazon.tests.US001_Homepage" />
+        </classes>
+    </test>
+
+    <test name="Product Search">
+        <classes>
+            <class name="amazon.tests.US002_ProductSearchTest" />
+            <class name="amazon.tests.US003_ProductSearchFilterTest"></class>
+        </classes>
+    </test>
+
+    <test name="Pagination Test">
+        <classes>
+            <class name="amazon.tests.US004_PaginationTest" />
+        </classes>
+    </test>
+
+</suite>
+
+<!--
+
+ <test name="LoginMain" parallel="classes" >
+        <classes>
+            <class name="testngpractise.WebLogin" />
+            <class name="testngpractise.MainPage" />
+        </classes>
+    </test>
+
+-->
