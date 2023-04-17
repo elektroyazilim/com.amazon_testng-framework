@@ -1,15 +1,11 @@
 package amazon.tests;
 
 import amazon.pages.LoginPageV1ByPriv;
-import amazon.utils.BrowserUtils;
 import amazon.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 public class LoginTestV1ByPriv {
 
@@ -30,7 +26,7 @@ public class LoginTestV1ByPriv {
 
     // TestNG nin bu ozelligi ile XML olmadan tek bir testi birden fazla ayni typte daki (multithread)
     // browser da kosturabiliyoruz. Parallel run for only one test
-    @Test(threadPoolSize = 2, invocationCount = 2) // threadPoolSize = 2, invocationCount = 2, timeOut = 5000
+    //@Test(threadPoolSize = 2, invocationCount = 2) // threadPoolSize = 2, invocationCount = 2, timeOut = 5000
     public void threadTest(){
         // her bir satırı 2 kez calistirarak ilerliyor, 2 kez rahul yaziyor, 2 kez checkbox a tikliyor gb..
         // tek driver imiz oldugundan anlamli degil

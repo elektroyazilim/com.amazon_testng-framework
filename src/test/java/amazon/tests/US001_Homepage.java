@@ -1,10 +1,8 @@
 package amazon.tests;
 
 import amazon.pages.HomePage;
-import amazon.utils.BrowserUtils;
 import amazon.utils.Config;
 import amazon.utils.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

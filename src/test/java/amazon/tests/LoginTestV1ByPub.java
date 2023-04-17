@@ -6,8 +6,6 @@ import amazon.utils.Driver;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 public class LoginTestV1ByPub {
 
     LoginPageV1ByPub loginPage = new LoginPageV1ByPub();
