@@ -184,7 +184,7 @@
 
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>src/test/resources/suites/testng.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
                             <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
                             <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
                         </suiteXmlFiles>
