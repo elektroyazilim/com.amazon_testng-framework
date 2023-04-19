@@ -49,9 +49,10 @@ public class Driver {
             We read our browser type from configuration.properties file using
             .getProperty method we creating in ConfigurationReader class.
              */
-                String browserType = Config.getProperty("browser");
+                // String browserType = Config.getProperty("browser");
+
                 // Maven parametres
-                // String browserType = System.getProperty("browser") == null ? Config.getProperty("browser"): System.getProperty("browser");
+               String browserType = System.getProperty("browser") == null ? Config.getProperty("browser"): System.getProperty("browser");
             /*
             Depending on the browser type our switch statement will determine
             to open specific type of browser/driver
