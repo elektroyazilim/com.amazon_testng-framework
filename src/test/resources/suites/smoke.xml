@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name=" test suite" parallel="tests" thread-count="2">
+<suite name=" test suite"  parallel="tests" thread-count="2">
     <!-- parallel="tests" thread-count="3" -->
 
     <listeners>
-        <listener class-name="amazon.tests.Listener" />
+        <listener class-name="amazon.tests.Listener"/>
     </listeners>
 
 
-    <test name="JSON Tests " >
+    <test name="JSON Tests ">
         <classes>
-            <class name="amazon.tests.JsonDataTest" />
+            <class name="amazon.tests.JsonDataTest"/>
         </classes>
     </test>
 
@@ -22,13 +22,13 @@
 
 </suite>
 
-<!--
+        <!--
 
- <test name="LoginMain" parallel="classes" >
-        <classes>
-            <class name="testngpractise.WebLogin" />
-            <class name="testngpractise.MainPage" />
-        </classes>
-    </test>
+         <test name="LoginMain" parallel="classes" >
+                <classes>
+                    <class name="testngpractise.WebLogin" />
+                    <class name="testngpractise.MainPage" />
+                </classes>
+            </test>
 
--->
+        -->

@@ -7,7 +7,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
@@ -52,7 +51,7 @@ public class Driver {
                 // String browserType = Config.getProperty("browser");
 
                 // Maven parametres
-               String browserType = System.getProperty("browser") == null ? Config.getProperty("browser"): System.getProperty("browser");
+                String browserType = System.getProperty("browser") == null ? Config.getProperty("browser") : System.getProperty("browser");
             /*
             Depending on the browser type our switch statement will determine
             to open specific type of browser/driver
@@ -60,7 +59,7 @@ public class Driver {
                 switch (browserType) {
 
                     case "chrome":
-                       driverPool.set(new ChromeDriver(chromeOptions));
+                        driverPool.set(new ChromeDriver(chromeOptions));
 
                         break;
                     case "firefox":
