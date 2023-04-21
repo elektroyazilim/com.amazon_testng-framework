@@ -74,7 +74,7 @@ public class JsonDataTest {
     public void dummyTest2()
     {
         System.out.println("Dummy Test 2");
-        Driver.getDriver().get("https://rahulshettyacademy.com/loginpagePractise/");
+        Driver.getDriver().get("https://www.amazon.com/");
         pom.getLoginPage().enterUsername("username");
         pom.getLoginPage().enterPassword("password");
         pom.getLoginPage().confirmLogin();

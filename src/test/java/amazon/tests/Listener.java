@@ -28,6 +28,7 @@ public class Listener implements ITestListener { // extends OutUtils
     @Override
     public void onTestSuccess(ITestResult result) {
         extentTest.get().log(Status.PASS, "Test passed successfully..");
+        extentTest.get().assignCategory("Success");
     }
 
     @Override
@@ -37,11 +38,15 @@ public class Listener implements ITestListener { // extends OutUtils
         String testName = result.getMethod().getMethodName();
         String destFilePath = OutUtils.takeScreenShotPage(testName);
 
+        OutUtils.takeFullScreenshot();
+
         // E:\selcourse\com.amazon.testng./src/test/resources/images/
         destFilePath = System.getProperty("user.dir")+ destFilePath.substring(1).replace("/","\\");
 
         extentTest.get().fail(result.getThrowable());
         extentTest.get().addScreenCaptureFromPath(destFilePath, testName);
+
+        extentTest.get().assignCategory("Failed");
     }
 
     @Override
