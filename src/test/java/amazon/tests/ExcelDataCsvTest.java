@@ -16,6 +16,7 @@ public class ExcelDataCsvTest {
         pom.getLoginPage().enterUsername(username);
         pom.getLoginPage().enterPassword(password);
         pom.getLoginPage().confirmLogin();
+        
     }
 
     @DataProvider

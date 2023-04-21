@@ -10,7 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
+import java.io.File;
 import java.time.Duration;
 import java.util.*;
 
@@ -375,9 +380,8 @@ public class BrowserUtils {
     }
 
     // clear textbox by javascript
-    public static void clearTxtboxByJs(WebElement element)
-    {
-        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+    public static void clearTxtboxByJs(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].value = '';", element);
     }
 
@@ -425,6 +429,16 @@ public class BrowserUtils {
         jse.executeScript(command);
     }
 
+    public static void hideElementJS(String selector) {
+        // to hide navbar
+        JavascriptExecutor jss = (JavascriptExecutor) Driver.getDriver();
+        jss.executeScript(
+                "document.querySelector('" + selector + "').style.visibility='hidden';");
+        //"document.querySelector('nav.cmp-navigation.cmp-navigation--sticky.cmp-navigation--stick').style.visibility='hidden';");
+    }
+
+
     //****** Javascript metotları *******************************
+
 
 }
