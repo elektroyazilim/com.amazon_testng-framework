@@ -1023,3 +1023,167 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 2023-04-21 21:08:53,466 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
 2023-04-21 21:08:58,642 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
 2023-04-21 21:09:00,264 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 21:58:37,740 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 21:58:37,740 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 21:58:44,347 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 21:58:45,104 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 21:58:47,208 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 21:58:49,140 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 21:59:02,608 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 21:59:07,802 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 21:59:09,342 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:00:29,925 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:00:29,925 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:00:35,419 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:00:35,931 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:00:39,256 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:00:41,225 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:01:57,716 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:02:02,810 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:02:04,403 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:04:47,927 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:04:47,927 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:04:56,127 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:04:57,539 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:04:58,403 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:04:58,593 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:05:13,143 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:05:18,302 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:05:19,859 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:15:16,406 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:15:16,406 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:15:22,344 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:15:22,848 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:15:25,148 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:15:27,107 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:15:39,941 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:15:45,383 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:15:46,924 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:25:56,814 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:25:56,814 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:26:03,427 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:26:04,571 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:26:05,906 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:26:07,917 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:26:20,231 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:26:25,212 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:26:26,747 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:26:47,911 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:26:47,911 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:26:53,319 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:26:55,440 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:26:56,175 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:26:56,914 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:27:08,438 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:27:13,595 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:27:15,131 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:27:46,650 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:27:46,650 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:27:52,166 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:27:52,681 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:27:55,029 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:27:56,969 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:28:09,570 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:28:14,979 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:28:16,545 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:28:30,451 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:28:30,451 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:28:35,910 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:28:36,423 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:28:39,372 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:28:41,294 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:28:53,338 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:28:58,489 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:29:00,057 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:29:18,237 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:29:18,237 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:29:23,722 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:29:25,896 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:29:26,657 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:29:27,319 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:29:38,207 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:29:43,217 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:29:44,788 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:31:49,636 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:31:49,636 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:31:55,146 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:31:57,511 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:31:58,310 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:31:59,515 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:32:10,890 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:32:16,155 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:32:17,653 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:39:58,232 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:39:58,232 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:40:04,479 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:40:05,161 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:40:09,012 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:40:11,159 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:40:23,495 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:40:28,756 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:40:30,474 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:43:31,948 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:43:31,949 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:43:38,478 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:43:39,198 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:43:42,879 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:43:45,657 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:43:59,803 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:44:05,091 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:44:06,958 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:48:07,534 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:48:07,534 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:48:14,710 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:48:18,215 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:48:19,678 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:48:20,502 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:37) - On Test Failure : loginDataTest
+2023-04-21 22:48:22,634 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:48:23,685 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:48:30,969 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:48:32,649 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:51:55,035 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:51:55,035 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:52:01,714 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:52:05,171 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:52:05,368 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:52:06,383 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:52:22,430 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:52:28,104 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:52:28,380 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : jsonLoginTest
+2023-04-21 22:52:35,233 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:53:12,177 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:53:12,177 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:53:18,221 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:53:18,875 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:53:21,999 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:53:24,290 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:53:41,072 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:53:46,189 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:53:47,922 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:55:24,132 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 22:55:24,132 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:55:31,453 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:55:33,010 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 22:55:35,135 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 22:55:37,604 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 22:55:50,686 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 22:55:56,000 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 22:55:57,741 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 23:00:18,425 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:00:18,425 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 23:00:27,876 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:00:28,761 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:00:29,958 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 23:00:32,735 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 23:01:25,971 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 23:01:31,943 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 23:01:33,810 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 23:06:50,881 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest
+2023-04-21 23:06:50,881 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:07:05,210 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest
+2023-04-21 23:07:06,409 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:07:08,207 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : dummyTest2
+2023-04-21 23:07:08,696 INFO amazon.tests.Listener [TestNG-tests-2] - (Listener.java:25) - Testname : loginDataTest
+2023-04-21 23:07:38,273 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:37) - On Test Failure : dummyTest2
+2023-04-21 23:07:44,064 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest
+2023-04-21 23:07:45,894 INFO amazon.tests.Listener [TestNG-tests-1] - (Listener.java:25) - Testname : jsonLoginTest

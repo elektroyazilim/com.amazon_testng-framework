@@ -1,4 +1,4 @@
-21:08:41.189 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : dummyTest2
-21:08:53.466 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:37) - On Test Failure : dummyTest2
-21:08:58.642 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
-21:09:00.264 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
+23:07:08.696 [TestNG-tests-2] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : loginDataTest
+23:07:38.273 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:37) - On Test Failure : dummyTest2
+23:07:44.064 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
+23:07:45.894 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
