@@ -15,6 +15,9 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class OutUtils {
 
@@ -45,9 +48,7 @@ public class OutUtils {
 
         try {
             ImageIO.write(screenshot.getImage(), "PNG", ssPath);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             System.out.println(ex);
         }
     }
@@ -56,9 +57,13 @@ public class OutUtils {
 
     //static ExtentReports extent;
 
+
     public static ExtentReports getExtentReportObject() {
         // ExtentReports, ExtentSparkReporter
-        String path = System.getProperty("user.dir") + "\\src\\test\\resources\\reports\\extent_index.html";
+        //String path = System.getProperty("user.dir") + "\\src\\test\\resources\\reports\\extent_index.html";
+
+        String path = relativeToAbsolutePath("src/test/resources/reports", "extent_index.html");
+
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 
         reporter.config().setReportName("Web Automation Results");
@@ -75,6 +80,28 @@ public class OutUtils {
         return extent;
     }
 
+    private static Path createDirectory(String relativePath) { // src/test/resources/reports
+        Path path = Paths.get(relativePath); // src\test\resources\reports
+        if (!Files.exists(path)) // what if folder is not
+        {
+            try {
+                Files.createDirectories(path);
+            } catch (Exception ex) {
+                System.out.println("Directory cannot created");
+            }
+        }
+        return path;
+    }
+
+    // This method also check that if the directory is exist or not, if not it created
+    public static String relativeToAbsolutePath(String relativePath, String fileName)
+    {
+        final String OUTPUT_FOLDER = relativePath; // "src/test/resources/reports"; // relative path
+        final String FILE_NAME = fileName; //"extent_index.html";
+        Path halfAbsolutePath = createDirectory(OUTPUT_FOLDER);
+        String path = System.getProperty("user.dir") + "\\" + halfAbsolutePath + "\\" + FILE_NAME;
+        return path;
+    }
 
 }
 
