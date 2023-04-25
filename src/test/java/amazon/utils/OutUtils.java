@@ -34,23 +34,26 @@ public class OutUtils {
             System.out.println("Ss Error : " + ex);
         }
 
-        return destFile; // ./src/test/resources/images/abc.png -> relative path
+        return relativeToAbsolutePath("src/test/resources/images", testName + ".png"); // ./src/test/resources/images/abc.png -> relative path
     }
 
-    public static void takeFullScreenshot()//Ashot
+    public static String takeFullScreenshot(String fileName)//Ashot
     {
         Screenshot screenshot = new AShot()
                 .shootingStrategy(ShootingStrategies.viewportPasting(100))
                 .takeScreenshot(Driver.getDriver());
 
-        String fileName = "screenshot-" + System.currentTimeMillis() + ".png";
-        File ssPath = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\images\\" + fileName);
+        String dynFileName = "screenshot-" + System.currentTimeMillis() + "-" + fileName + ".png";
+        // File ssPath = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\images\\" + fileName);
+        File ssPath = new File(relativeToAbsolutePath("src/test/resources/images", dynFileName));
 
         try {
             ImageIO.write(screenshot.getImage(), "PNG", ssPath);
         } catch (Exception ex) {
             System.out.println(ex);
         }
+
+        return ssPath.toString();
     }
 
     // Reports, ExtentReport or Allure
@@ -62,13 +65,15 @@ public class OutUtils {
         // ExtentReports, ExtentSparkReporter
         //String path = System.getProperty("user.dir") + "\\src\\test\\resources\\reports\\extent_index.html";
 
+        // gives you absolute path :
         String path = relativeToAbsolutePath("src/test/resources/reports", "extent_index.html");
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 
-        reporter.config().setReportName("Web Automation Results");
-        reporter.config().setDocumentTitle("Test Results");
+        reporter.config().setReportName("Web Automation Test Results");
+        reporter.config().setDocumentTitle("Web Automation Test Results");
         reporter.config().setTheme(Theme.STANDARD);
+
         reporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
         reporter.config().setEncoding("UTF-8");
         // reporter.config().setOfflineMode(true);
@@ -94,11 +99,11 @@ public class OutUtils {
     }
 
     // This method also check that if the directory is exist or not, if not it created
-    public static String relativeToAbsolutePath(String relativePath, String fileName)
+    public static String relativeToAbsolutePath(String relativePath, String fileName) // dynamic absolute path
     {
         final String OUTPUT_FOLDER = relativePath; // "src/test/resources/reports"; // relative path
         final String FILE_NAME = fileName; //"extent_index.html";
-        Path halfAbsolutePath = createDirectory(OUTPUT_FOLDER);
+        Path halfAbsolutePath = createDirectory(OUTPUT_FOLDER); // src\test\resources\reports"
         String path = System.getProperty("user.dir") + "\\" + halfAbsolutePath + "\\" + FILE_NAME;
         return path;
     }
