@@ -33,6 +33,8 @@ public class Driver {
         //setting various capabilities for browsers
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("use-fake-ui-for-media-stream");
+        // co.addArguments("--incognito");
+        // co.addArguments("--headless=new");
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("use-fake-ui-for-media-stream");
@@ -73,6 +75,11 @@ public class Driver {
 
                     case "safari":
                         driverPool.set(new SafariDriver());
+                        break;
+
+                    case "chrome-headless":
+                        chromeOptions.addArguments("--headless=new");
+                        driverPool.set(new ChromeDriver(chromeOptions));
                         break;
 
                 }

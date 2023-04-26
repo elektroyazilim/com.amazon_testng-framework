@@ -1,6 +1,7 @@
 package amazon.tests;
 
 import amazon.pages.HomePage;
+import amazon.pages.POManager;
 import amazon.pages.SearchPage;
 import amazon.utils.AmazonUtils;
 import amazon.utils.Driver;
@@ -15,15 +16,17 @@ import java.util.List;
 public class US002_ProductSearchTest { // static
     // US002_Product Search - Verify the product search functionality
 
-    HomePage homePage = new HomePage();
-    SearchPage searchPage = new SearchPage();
+    //HomePage homePage = new HomePage();
+    //SearchPage searchPage = new SearchPage();
+
+    POManager pom = new POManager();
 
     @Test
     public void TC001_SearchByClickOnSearchIcon() {
         // Verify that after entering search text and clicking on search icon, the search should be performed.
 
         String searchText = "headphone";
-        AmazonUtils.takeMeToSearchPage(homePage, searchText);
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(), searchText);
         // search page
         String currentUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(currentUrl.contains(searchText));
@@ -37,9 +40,9 @@ public class US002_ProductSearchTest { // static
 
         String searchText = "Headphones".toLowerCase();
 
-        AmazonUtils.takeMeToSearchPage(homePage, searchText);
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(), searchText);
         // search page - results
-        List<WebElement> products = searchPage.searchResults; // product titles
+        List<WebElement> products = pom.getSearchPage().searchResults; // product titles
 
         //  ignore list
         List<String> words = new ArrayList<>() {{
@@ -74,23 +77,23 @@ public class US002_ProductSearchTest { // static
     public void TC003_PresenceFilterSection() {
         // Verify that filter should be present for filtering the search results bases on Brand, Price, Reviews or Ratings.
 
-        AmazonUtils.takeMeToSearchPage(homePage, "aaa");
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(), "aaa");
 
-        Assert.assertTrue(searchPage.filterSection.isDisplayed());
-        Assert.assertTrue(searchPage.brandFilter.isDisplayed());
-        Assert.assertTrue(searchPage.priceFilter.isDisplayed());
-        Assert.assertTrue(searchPage.reviewFilter.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().filterSection.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().brandFilter.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().priceFilter.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().reviewFilter.isDisplayed());
     }
 
     @Test
     public void TC004_SortingOptionsInFilterPage() {
         // Verify that sorting options should be present and be clickable on search results page.
 
-        AmazonUtils.takeMeToSearchPage(homePage,"aaa"); // String searchText = "aaa";
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(),"aaa"); // String searchText = "aaa";
 
         // search page
-        Assert.assertTrue(searchPage.sortOptBtn.isDisplayed());
-        Assert.assertTrue(searchPage.sortOptBtn.isEnabled());
+        Assert.assertTrue(pom.getSearchPage().sortOptBtn.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().sortOptBtn.isEnabled());
     }
 
     @Test
@@ -98,10 +101,10 @@ public class US002_ProductSearchTest { // static
         // Verify that the number of search results displayed on one page.
 
         String searchText = "Headphone";
-        AmazonUtils.takeMeToSearchPage(homePage, searchText);
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(), searchText);
 
         // 1-48 of 277 results for "aaa"
-        String text = searchPage.numberOfSearchResult.getText().toLowerCase();
+        String text = pom.getSearchPage().numberOfSearchResult.getText().toLowerCase();
 
         Assert.assertTrue(!text.isEmpty());
         Assert.assertTrue(text.contains(searchText.toLowerCase()));
@@ -110,13 +113,13 @@ public class US002_ProductSearchTest { // static
     @Test
     public void TC006_PresencePreviousNextButton() {
         // Verify that there should be navigation button(Next and Previous) for navigation to pages
-        AmazonUtils.takeMeToSearchPage(homePage, "aaa");
+        AmazonUtils.takeMeToSearchPage(pom.getHomePage(), "aaa");
         // search page
-        Assert.assertTrue(searchPage.previousBtn.isDisplayed());
-        Assert.assertTrue(searchPage.nextBtn.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().previousBtn.isDisplayed());
+        Assert.assertTrue(pom.getSearchPage().nextBtn.isDisplayed());
         // System.out.println(searchPage.previousBtn.isEnabled()); // not working
 
-        String prevBtnClass = searchPage.previousBtn.getAttribute("class");
+        String prevBtnClass = pom.getSearchPage().previousBtn.getAttribute("class");
 
         if (prevBtnClass.contains("disabled"))
         {

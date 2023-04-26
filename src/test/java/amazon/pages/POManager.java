@@ -7,6 +7,7 @@ public class POManager {
     private SearchPage searchPage;
 
 
+
     public HomePage getHomePage() {
         return homePage == null ? new HomePage() : homePage;
     }

@@ -1,5 +1,4 @@
-14:51:44.542 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:37) - On Test Failure : dummyTest
-14:51:46.420 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : dummyTest2
-14:52:00.908 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:37) - On Test Failure : dummyTest2
-14:52:05.766 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
-14:52:07.344 [TestNG-tests-1] INFO  amazon.tests.Listener - (Listener.java:25) - Testname : jsonLoginTest
+16:31:14.997 [TestNG-tests-1] INFO  amazon.tests.ExtentReportListener - (ExtentReportListener.java:23) - Testname : jsonLoginTest
+16:31:14.999 [TestNG-tests-1] INFO  amazon.tests.AllureReportListener - (AllureReportListener.java:53) - Testname : jsonLoginTest
+16:31:26.223 [TestNG-tests-3] INFO  amazon.tests.ExtentReportListener - (ExtentReportListener.java:23) - Testname : TC004_RedirectProductPage
+16:31:26.224 [TestNG-tests-3] INFO  amazon.tests.AllureReportListener - (AllureReportListener.java:53) - Testname : TC004_RedirectProductPage
