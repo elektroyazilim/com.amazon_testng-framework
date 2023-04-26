@@ -1,6 +1,7 @@
 package amazon.tests;
 
 import amazon.pages.HomePage;
+import amazon.pages.POManager;
 import amazon.utils.Config;
 import amazon.utils.Driver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,8 @@ import java.util.List;
 public class US001_Homepage { // static
 
     // US001_Verify the details on Home page
-    HomePage homePage = new HomePage();
+    // HomePage homePage = new HomePage();
+    POManager pom = new POManager();
     String website = Config.getProperty("url");
 
     @Test
@@ -34,7 +36,7 @@ public class US001_Homepage { // static
 
         Driver.getDriver().get(website);
 
-        WebElement searchBox = homePage.searchBox;
+        WebElement searchBox = pom.getHomePage().searchBox;
         Assert.assertTrue(searchBox.isDisplayed());
 
     }
@@ -43,7 +45,7 @@ public class US001_Homepage { // static
     public void TC003_ProductsClickable() {
         // Verify that products displayed on home page are clickable.
         Driver.getDriver().get(website);
-        List<WebElement> elements = homePage.products;
+        List<WebElement> elements = pom.getHomePage().products;
         for (WebElement element : elements) {
             Assert.assertTrue(element.isEnabled());
             // System.out.println(elements.indexOf(element) + " element");
@@ -54,9 +56,9 @@ public class US001_Homepage { // static
     public void TC004_RedirectProductPage() {
         // Verify that when user clicks on a product, user should be redirected to product specification page.
         Driver.getDriver().get(website);
-        WebElement anyElement = homePage.products.get(0);
+        WebElement anyElement = pom.getHomePage().products.get(0);
 
-        String firstProductUrl = homePage.firstProductInHome.getAttribute("href");
+        String firstProductUrl = pom.getHomePage().firstProductInHome.getAttribute("href");
         anyElement.click();
 
         // BrowserUtils.waitFor(1);
