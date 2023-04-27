@@ -1666,3 +1666,31 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 2023-04-26 16:31:14,999 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : jsonLoginTest
 2023-04-26 16:31:26,223 INFO amazon.tests.ExtentReportListener [TestNG-tests-3] - (ExtentReportListener.java:23) - Testname : TC004_RedirectProductPage
 2023-04-26 16:31:26,224 INFO amazon.tests.AllureReportListener [TestNG-tests-3] - (AllureReportListener.java:53) - Testname : TC004_RedirectProductPage
+2023-04-27 21:15:52,466 INFO amazon.tests.ExtentReportListener [TestNG-tests-2] - (ExtentReportListener.java:23) - Testname : loginDataTest
+2023-04-27 21:15:52,476 INFO amazon.tests.AllureReportListener [TestNG-tests-2] - (AllureReportListener.java:53) - Testname : loginDataTest
+2023-04-27 21:15:55,152 INFO amazon.tests.ExtentReportListener [TestNG-tests-3] - (ExtentReportListener.java:23) - Testname : TC001_HomepageAccessible
+2023-04-27 21:15:55,158 INFO amazon.tests.AllureReportListener [TestNG-tests-3] - (AllureReportListener.java:53) - Testname : TC001_HomepageAccessible
+2023-04-27 21:15:55,750 INFO amazon.tests.ExtentReportListener [TestNG-tests-2] - (ExtentReportListener.java:23) - Testname : loginDataTest
+2023-04-27 21:15:55,755 INFO amazon.tests.AllureReportListener [TestNG-tests-2] - (AllureReportListener.java:53) - Testname : loginDataTest
+2023-04-27 21:15:57,814 INFO amazon.tests.ExtentReportListener [TestNG-tests-2] - (ExtentReportListener.java:23) - Testname : loginDataTest
+2023-04-27 21:15:57,817 INFO amazon.tests.AllureReportListener [TestNG-tests-2] - (AllureReportListener.java:53) - Testname : loginDataTest
+2023-04-27 21:15:58,740 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:23) - Testname : dummyTest
+2023-04-27 21:15:58,750 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : dummyTest
+2023-04-27 21:16:01,313 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:65) - On Test Failure : dummyTest
+2023-04-27 21:16:05,144 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:36) - On Test Failure : dummyTest
+2023-04-27 21:16:07,607 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:23) - Testname : dummyTest2
+2023-04-27 21:16:07,612 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : dummyTest2
+2023-04-27 21:16:11,522 INFO amazon.tests.ExtentReportListener [TestNG-tests-3] - (ExtentReportListener.java:23) - Testname : TC002_PresentSearchFunctionality
+2023-04-27 21:16:11,522 INFO amazon.tests.AllureReportListener [TestNG-tests-3] - (AllureReportListener.java:53) - Testname : TC002_PresentSearchFunctionality
+2023-04-27 21:16:25,759 INFO amazon.tests.ExtentReportListener [TestNG-tests-3] - (ExtentReportListener.java:23) - Testname : TC003_ProductsClickable
+2023-04-27 21:16:25,768 INFO amazon.tests.AllureReportListener [TestNG-tests-3] - (AllureReportListener.java:53) - Testname : TC003_ProductsClickable
+2023-04-27 21:16:26,394 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:65) - On Test Failure : dummyTest2
+2023-04-27 21:16:37,566 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:36) - On Test Failure : dummyTest2
+2023-04-27 21:16:47,988 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:23) - Testname : jsonLoginTest
+2023-04-27 21:16:47,991 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : jsonLoginTest
+2023-04-27 21:16:50,089 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:23) - Testname : jsonLoginTest
+2023-04-27 21:16:50,090 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : jsonLoginTest
+2023-04-27 21:16:54,899 INFO amazon.tests.ExtentReportListener [TestNG-tests-3] - (ExtentReportListener.java:23) - Testname : TC004_RedirectProductPage
+2023-04-27 21:16:54,917 INFO amazon.tests.AllureReportListener [TestNG-tests-3] - (AllureReportListener.java:53) - Testname : TC004_RedirectProductPage
+2023-04-27 22:17:57,075 INFO amazon.tests.ExtentReportListener [TestNG-tests-1] - (ExtentReportListener.java:23) - Testname : TC001_SearchByClickOnSearchIcon
+2023-04-27 22:17:57,080 INFO amazon.tests.AllureReportListener [TestNG-tests-1] - (AllureReportListener.java:53) - Testname : TC001_SearchByClickOnSearchIcon

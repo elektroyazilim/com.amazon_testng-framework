@@ -9,6 +9,7 @@ public class POManager {
 
 
     public HomePage getHomePage() {
+
         return homePage == null ? new HomePage() : homePage;
     }
     public LoginPage getLoginPage() {
