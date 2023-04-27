@@ -8,7 +8,7 @@
         <listener class-name="amazon.tests.AllureReportListener"></listener>
     </listeners>
 
-
+<!--
     <test name="JSON Tests ">
         <classes>
             <class name="amazon.tests.JsonDataTest"/>
@@ -20,10 +20,13 @@
             <class name="amazon.tests.ExcelDataCsvTest"></class>
         </classes>
     </test>
+ -->
 
-    <test name="amazon tests">
+    <test name="SearchPage tests 2">
         <classes>
-            <class name="amazon.tests.US001_Homepage"></class>
+            <class name="amazon.tests.US002_ProductSearchTest2"></class>
+            <class name="amazon.tests.US003_ProductSearchFilterTest2"></class>
+            <class name="amazon.tests.US004_PaginationTest2"></class>
         </classes>
     </test>
 

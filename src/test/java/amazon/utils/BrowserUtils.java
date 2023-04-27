@@ -336,6 +336,13 @@ public class BrowserUtils {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
+    public static void scrollTopOfPage(WebDriver driver)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0)");
+
+    }
+
     public static void clickXYByJs() {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         String jsCode = "const simulateClick = (x, y) => {\n" +
